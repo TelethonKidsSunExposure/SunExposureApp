@@ -1,14 +1,30 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    >
-<Button  
-    android:id="@+id/myButton"
-    android:layout_width="match_parent" 
-    android:layout_height="wrap_content" 
-    android:text="@string/hello"
-    />
+    android:background="#fffbc02d">
+    <TextView
+        android:text="Step One"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:textColor="#ff1a1d30"
+        android:gravity="center"
+        android:layout_marginTop="40dp" />
+    <TextView
+        android:text="You'll need to be outside in order to take the best photos."
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/InstructionStep1"
+        android:textColor="#ff1a1d30"
+        android:gravity="center"
+        android:layout_marginTop="30dp" />
+    <ImageView
+        android:src="@drawable/step1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView1" />
 </LinearLayout>
-
