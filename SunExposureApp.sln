@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SunExposureApp", "SunExposureApp\SunExposureApp.csproj", "{3DB8E8AE-30EA-4479-B58C-D36B1E80A6C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SunExposureApp.UITests", "SunExposureApp.UITests\SunExposureApp.UITests.csproj", "{4F9504B4-5D22-4556-B0CF-58DE2A9DDA7B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3DB8E8AE-30EA-4479-B58C-D36B1E80A6C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DB8E8AE-30EA-4479-B58C-D36B1E80A6C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DB8E8AE-30EA-4479-B58C-D36B1E80A6C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DB8E8AE-30EA-4479-B58C-D36B1E80A6C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F9504B4-5D22-4556-B0CF-58DE2A9DDA7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F9504B4-5D22-4556-B0CF-58DE2A9DDA7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F9504B4-5D22-4556-B0CF-58DE2A9DDA7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F9504B4-5D22-4556-B0CF-58DE2A9DDA7B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
