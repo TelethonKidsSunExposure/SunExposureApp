@@ -20,13 +20,6 @@ namespace SunExposureApp
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
 
-//			// Get our button from the layout resource,
-//			// and attach an event to it
-//			Button button = FindViewById<Button> (Resource.Id.myButton);
-//			
-//			button.Click += delegate {
-//				button.Text = string.Format ("{0} clicks!", count++);
-//			};
 			var viewGroup = ((ViewGroup)FindViewById<TextView> (Resource.Id.InstructionStep1).Parent);
 			viewGroup.SetOnTouchListener(new OnSwipeListener(this));
 		}
@@ -51,13 +44,10 @@ namespace SunExposureApp
 		{
 			base.OnActivityResult (requestCode, resultCode, data);
 
-			if (requestCode == 100) {
-				if (resultCode == Result.Canceled) {
-				} else {
-				}
+			if (requestCode == 100 && resultCode != Result.Canceled) {
+				StartActivity (typeof(ResultsActivity));
 			}
 		}
-
 	}
 }
 
