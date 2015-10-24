@@ -35,10 +35,10 @@ namespace SunExposureApp
 		{
 			switch (v.Id) {
 			case Resource.Id.saveProfile:
-				// StartActivity (typeof(SaveProfileActivity));
+				StartActivity (typeof(SaveProfileActivity));
 				break;
 			case Resource.Id.setReminder:
-				// StartActivity (typeof(SetReminderActivity));
+				StartActivity (typeof(SetReminderActivity));
 				break;
 			}
 		}
