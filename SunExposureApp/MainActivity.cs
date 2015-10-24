@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Android.Provider;
 
 namespace SunExposureApp
 {
@@ -26,7 +27,8 @@ namespace SunExposureApp
 //			button.Click += delegate {
 //				button.Text = string.Format ("{0} clicks!", count++);
 //			};
-			((ViewGroup) FindViewById<TextView>(Resource.Id.InstructionStep1).Parent).SetOnTouchListener(new OnSwipeListener(this));
+			var viewGroup = ((ViewGroup)FindViewById<TextView> (Resource.Id.InstructionStep1).Parent);
+			viewGroup.SetOnTouchListener(new OnSwipeListener(this));
 		}
 
 		private class OnSwipeListener : OnSwipeTouchListener 
@@ -39,8 +41,20 @@ namespace SunExposureApp
 			}
 
 			public override bool OnSwipeLeft() {
-				activity.StartActivity (typeof(TakePhotoActivity));
+				Intent intent = new Intent(MediaStore.ActionImageCapture);
+				activity.StartActivityForResult (intent, 100);
 				return true;
+			}
+		}
+
+		protected override void OnActivityResult (int requestCode, Result resultCode, Intent data)
+		{
+			base.OnActivityResult (requestCode, resultCode, data);
+
+			if (requestCode == 100) {
+				if (resultCode == Result.Canceled) {
+				} else {
+				}
 			}
 		}
 
