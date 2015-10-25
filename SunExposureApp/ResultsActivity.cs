@@ -26,10 +26,11 @@ namespace SunExposureApp
 
 			// Create your application here
 			var buttons = new List<Button> {FindViewById<Button>(Resource.Id.saveProfile), FindViewById<Button> (Resource.Id.setReminder)};
-
-			var lightingColorFilter = new LightingColorFilter (0xFFFFFFFF, 0xFF1A1D30);
-			buttons.ForEach (x => x.Background.SetColorFilter (lightingColorFilter));
 			buttons.ForEach (x => x.SetOnClickListener (this));
+			unchecked {
+				var lightingColorFilter = new LightingColorFilter ((int)0xFFFFFFFF, (int)0xFF1A1D30);
+				buttons.ForEach (x => x.Background.SetColorFilter (lightingColorFilter));
+			}
 		}
 
 		public void OnClick (View v)

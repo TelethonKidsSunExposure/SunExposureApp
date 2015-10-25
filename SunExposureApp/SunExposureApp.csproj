@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -55,6 +55,11 @@
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
+    <AndroidResource Include="Resources\layout\SetReminder.axml" />
+    <AndroidResource Include="Resources\layout\SaveProfile.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\step2.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\step3.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\step4.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -67,8 +72,6 @@
     <AndroidResource Include="Resources\drawable-mdpi\step1.png" />
     <AndroidResource Include="Resources\layout\Results.axml" />
     <AndroidResource Include="Resources\drawable-mdpi\logo.png" />
-    <AndroidResource Include="Resources\layout\SaveProfile.axml" />
-    <AndroidResource Include="Resources\layout\SetReminder.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
 </Project>
