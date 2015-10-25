@@ -11,6 +11,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Provider;
+using Android.Graphics;
 
 namespace SunExposureApp
 {
@@ -24,11 +25,11 @@ namespace SunExposureApp
 			SetContentView (Resource.Layout.Results);
 
 			// Create your application here
-			var saveProfile = FindViewById<Button>(Resource.Id.saveProfile);
-			var setReminder = FindViewById<Button> (Resource.Id.setReminder);
+			var buttons = new List<Button> {FindViewById<Button>(Resource.Id.saveProfile), FindViewById<Button> (Resource.Id.setReminder)};
 
-			saveProfile.SetOnClickListener (this);
-			setReminder.SetOnClickListener (this);
+			var lightingColorFilter = new LightingColorFilter (0xFFFFFFFF, 0xFF1A1D30);
+			buttons.ForEach (x => x.Background.SetColorFilter (lightingColorFilter));
+			buttons.ForEach (x => x.SetOnClickListener (this));
 		}
 
 		public void OnClick (View v)
