@@ -13,8 +13,9 @@ using Android.Widget;
 
 namespace SunExposureApp
 {
-	[Activity (Label = "SaveProfileActivity")]			
-	public class SaveProfileActivity : Activity
+	[Activity (Label = "SaveProfileActivity",
+        Theme = "@android:style/Theme.DeviceDefault.Light.NoActionBar")]
+    public class SaveProfileActivity : Activity
 	{
 		protected override void OnCreate (Bundle bundle)
 		{

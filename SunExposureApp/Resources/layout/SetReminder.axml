@@ -1,8 +1,61 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:background="#fffbc02d"
+        android:paddingRight="40dp"
+        android:paddingLeft="40dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp">
+        <TextView
+            android:text="Set Reminder"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1"
+            android:textColor="#ff1a1d30"
+            android:gravity="center"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <ScrollView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView1">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout2">
+            <TextView
+                android:text="I will set a reminder for 15 minutes"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:gravity="center"
+                android:textColor="#ff1a1d30"
+                android:textSize="50dp"
+                android:lineSpacingExtra="-10dp"
+                android:fontFamily="sans-serif-thin"
+                android:layout_margin="20dp" />
+            <Button
+                android:text="Okay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/button1"
+                android:background="#ff4caf50"
+                android:textColor="#ffffffff"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:layout_margin="35dp" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
-

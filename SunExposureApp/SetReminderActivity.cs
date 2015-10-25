@@ -13,8 +13,9 @@ using Android.Widget;
 
 namespace SunExposureApp
 {
-	[Activity (Label = "SetReminderActivity")]			
-	public class SetReminderActivity : Activity
+	[Activity (Label = "SetReminderActivity",
+        Theme = "@android:style/Theme.DeviceDefault.Light.NoActionBar")]
+    public class SetReminderActivity : Activity
 	{
 		protected override void OnCreate (Bundle bundle)
 		{

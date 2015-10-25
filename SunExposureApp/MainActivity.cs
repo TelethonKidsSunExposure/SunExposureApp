@@ -10,7 +10,8 @@ using Android.Provider;
 
 namespace SunExposureApp
 {
-	[Activity (Label = "SunExposureApp", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity (Label = "SunExposureApp", MainLauncher = true, Icon = "@drawable/icon",
+        Theme = "@android:style/Theme.DeviceDefault.Light.NoActionBar")]
 	public class MainActivity : Activity
 	{
 		private ViewFlipper _viewFlipper;

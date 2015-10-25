@@ -1,8 +1,116 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:background="#fffbc02d"
+        android:paddingRight="40dp"
+        android:paddingLeft="40dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp">
+        <TextView
+            android:text="Save profile"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1"
+            android:textColor="#ff1a1d30"
+            android:gravity="center"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <ScrollView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView1">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout2">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText1"
+                android:padding="20dp"
+                android:layout_margin="20dp"
+                android:text="enter your name" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout2"
+                android:paddingRight="30dp"
+                android:paddingLeft="30dp"
+                android:layout_marginTop="30dp">
+                <TextView
+                    android:text="Skin Type"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/textView4"
+                    android:textColor="#ff1a1d30"
+                    android:minWidth="160dp"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:text="Very Fair"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/textView5"
+                    android:textColor="#ff1a1d30"
+                    android:minWidth="160dp"
+                    android:textAlignment="viewStart"
+                    android:gravity="right"
+                    android:textSize="16dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout4"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:layout_marginTop="30dp">
+                <TextView
+                    android:text="Location"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/textView8"
+                    android:textColor="#ff1a1d30"
+                    android:minWidth="160dp"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:text="Perth, WA"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/textView9"
+                    android:textColor="#ff1a1d30"
+                    android:gravity="right"
+                    android:minWidth="160dp"
+                    android:textSize="16dp" />
+            </LinearLayout>
+            <Button
+                android:text="Okay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/button1"
+                android:layout_marginTop="0.0dp"
+                android:background="#ff4caf50"
+                android:textColor="#ffffffff"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:layout_margin="35dp" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
-
