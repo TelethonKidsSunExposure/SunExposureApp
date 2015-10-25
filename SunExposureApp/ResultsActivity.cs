@@ -15,8 +15,9 @@ using Android.Graphics;
 
 namespace SunExposureApp
 {
-	[Activity (Label = "ResultsActivity")]			
-	public class ResultsActivity : Activity, Android.Views.View.IOnClickListener
+	[Activity (Label = "ResultsActivity",
+        Theme = "@android:style/Theme.DeviceDefault.Light.NoActionBar")]
+    public class ResultsActivity : Activity, Android.Views.View.IOnClickListener
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
