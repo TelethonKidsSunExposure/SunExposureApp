@@ -57,6 +57,9 @@
     <None Include="Assets\AboutAssets.txt" />
     <AndroidResource Include="Resources\layout\SetReminder.axml" />
     <AndroidResource Include="Resources\layout\SaveProfile.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\step2.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\step3.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\step4.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
