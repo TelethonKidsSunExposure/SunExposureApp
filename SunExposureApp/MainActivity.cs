@@ -13,6 +13,8 @@ namespace SunExposureApp
 	[Activity (Label = "SunExposureApp", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
+		private ViewFlipper _viewFlipper;
+
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
@@ -20,22 +22,41 @@ namespace SunExposureApp
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
 
-			var viewGroup = ((ViewGroup)FindViewById<TextView> (Resource.Id.InstructionStep1).Parent);
-			viewGroup.SetOnTouchListener(new OnSwipeListener(this));
+			//var viewGroup = ((ViewGroup)FindViewById<TextView> (Resource.Id.InstructionStep1).Parent);
+			//viewGroup.SetOnTouchListener(new OnSwipeListener(this));
+			_viewFlipper = FindViewById<ViewFlipper>(Resource.Id.ViewFlipper);
+
+			var onSwipeListener = new OnSwipeListener (_viewFlipper, this);
+			FindViewById(Resource.Id.step1View).SetOnTouchListener (onSwipeListener);
+			FindViewById(Resource.Id.step2View).SetOnTouchListener (onSwipeListener);
+			FindViewById(Resource.Id.step3View).SetOnTouchListener (onSwipeListener);
+			FindViewById(Resource.Id.step4View).SetOnTouchListener (onSwipeListener);
 		}
 
 		private class OnSwipeListener : OnSwipeTouchListener 
 		{
-			private readonly MainActivity activity;
+			private readonly ViewFlipper _viewFlipper;
+			private readonly MainActivity _activity;
 			
-			public OnSwipeListener(MainActivity activity)
+			public OnSwipeListener(ViewFlipper viewFlipper, MainActivity activity)
 			{
-				this.activity = activity;
+				_viewFlipper = viewFlipper;
+				_activity = activity;
 			}
 
 			public override bool OnSwipeLeft() {
-				Intent intent = new Intent(MediaStore.ActionImageCapture);
-				activity.StartActivityForResult (intent, 100);
+				_viewFlipper.SetInAnimation (_activity, Resource.Animation.slideInFromRight);
+				_viewFlipper.SetOutAnimation(_activity, Resource.Animation.slideOutToLeft);
+				_viewFlipper.ShowNext ();
+//				Intent intent = new Intent(MediaStore.ActionImageCapture);
+//				activity.StartActivityForResult (intent, 100);
+				return true;
+			}
+
+			public override bool OnSwipeRight() {
+				_viewFlipper.SetInAnimation (_activity, Resource.Animation.slideInFromLeft);
+				_viewFlipper.SetOutAnimation(_activity, Resource.Animation.slideOutToRight);
+				_viewFlipper.ShowPrevious ();
 				return true;
 			}
 		}

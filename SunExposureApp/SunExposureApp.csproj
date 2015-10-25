@@ -60,6 +60,10 @@
     <AndroidResource Include="Resources\drawable-mdpi\step2.png" />
     <AndroidResource Include="Resources\drawable-mdpi\step3.png" />
     <AndroidResource Include="Resources\drawable-mdpi\step4.png" />
+    <AndroidResource Include="Resources\anim\slideInFromLeft.xml" />
+    <AndroidResource Include="Resources\anim\slideOutToRight.xml" />
+    <AndroidResource Include="Resources\anim\slideInFromRight.xml" />
+    <AndroidResource Include="Resources\anim\slideOutToLeft.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -74,4 +78,7 @@
     <AndroidResource Include="Resources\drawable-mdpi\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Resources\anim\" />
+  </ItemGroup>
 </Project>
