@@ -1,138 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/ViewFlipper"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-    <LinearLayout
-        android:orientation="vertical"
+    android:layout_height="fill_parent"
+    android:background="#fffbc02d">
+    <ViewFlipper
+        android:id="@+id/ViewFlipper"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="#fffbc02d"
-        android:padding="40dp"
-        android:id="@+id/step1View">
-        <TextView
-            android:text="Step One"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView1"
-            android:textColor="#ff1a1d30"
-            android:gravity="center"
-            android:layout_marginTop="20dp" />
-        <TextView
-            android:text="You'll need to be outside in order to take the best photos."
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/InstructionStep1"
-            android:textColor="#ff1a1d30"
-            android:gravity="center"
-            android:padding="20dp"
-            android:layout_marginTop="20dp" />
-        <ImageView
-            android:src="@drawable/step1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView1"
-            android:layout_marginTop="20dp" />
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="#fffbc02d"
-        android:padding="40dp"
-        android:id="@+id/step2View">
-        <TextView
-            android:text="Step Two"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView2"
-            android:textColor="#ff1a1d30"
-            android:gravity="center"
-            android:layout_marginTop="20dp" />
-        <TextView
-            android:text="You'll need to be outside in order to take the best photos."
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/InstructionStep2"
-            android:textColor="#ff1a1d30"
-            android:gravity="center"
-            android:padding="20dp"
-            android:layout_marginTop="20dp" />
-        <ImageView
-            android:src="@drawable/step2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView2"
-            android:layout_marginTop="20dp" />
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="#fffbc02d"
-        android:padding="40dp"
-        android:id="@+id/step3View">
-        <TextView
-            android:text="Step Three"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView3"
-            android:textColor="#ff1a1d30"
-            android:gravity="center"
-            android:layout_marginTop="20dp" />
-        <TextView
-            android:text="You'll need to be outside in order to take the best photos."
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/InstructionStep3"
-            android:textColor="#ff1a1d30"
-            android:gravity="center"
-            android:padding="20dp"
-            android:layout_marginTop="20dp" />
-        <ImageView
-            android:src="@drawable/step3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView3"
-            android:layout_marginTop="20dp" />
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="#fffbc02d"
-        android:padding="40dp"
-        android:id="@+id/step4View">
-        <TextView
-            android:text="Step Four"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView4"
-            android:textColor="#ff1a1d30"
-            android:gravity="center"
-            android:layout_marginTop="20dp" />
-        <TextView
-            android:text="You'll need to be outside in order to take the best photos."
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/InstructionStep4"
-            android:textColor="#ff1a1d30"
-            android:gravity="center"
-            android:padding="20dp"
-            android:layout_marginTop="20dp" />
-        <ImageView
-            android:src="@drawable/step4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView4"
-            android:layout_marginTop="20dp" />
-    </LinearLayout>
-</ViewFlipper>
+        android:layout_height="450dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="40dp"
+            android:id="@+id/step1View">
+            <TextView
+                android:text="Step One"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1"
+                android:textColor="#ff1a1d30"
+                android:gravity="center"
+                android:layout_marginTop="20dp" />
+            <TextView
+                android:text="You'll need to be outside in order to take the best photos."
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/InstructionStep1"
+                android:textColor="#ff1a1d30"
+                android:gravity="center"
+                android:padding="20dp"
+                android:layout_marginTop="20dp" />
+            <ImageView
+                android:src="@drawable/step1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView1"
+                android:layout_marginTop="20dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#fffbc02d"
+            android:padding="40dp"
+            android:id="@+id/step2View">
+            <TextView
+                android:text="Step Two"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:textColor="#ff1a1d30"
+                android:gravity="center"
+                android:layout_marginTop="20dp" />
+            <TextView
+                android:text="You'll need to be outside in order to take the best photos."
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/InstructionStep2"
+                android:textColor="#ff1a1d30"
+                android:gravity="center"
+                android:padding="20dp"
+                android:layout_marginTop="20dp" />
+            <ImageView
+                android:src="@drawable/step2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView2"
+                android:layout_marginTop="20dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#fffbc02d"
+            android:padding="40dp"
+            android:id="@+id/step3View">
+            <TextView
+                android:text="Step Three"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3"
+                android:textColor="#ff1a1d30"
+                android:gravity="center"
+                android:layout_marginTop="20dp" />
+            <TextView
+                android:text="You'll need to be outside in order to take the best photos."
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/InstructionStep3"
+                android:textColor="#ff1a1d30"
+                android:gravity="center"
+                android:padding="20dp"
+                android:layout_marginTop="20dp" />
+            <ImageView
+                android:src="@drawable/step3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView3"
+                android:layout_marginTop="20dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#fffbc02d"
+            android:padding="40dp"
+            android:id="@+id/step4View">
+            <TextView
+                android:text="Step Four"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4"
+                android:textColor="#ff1a1d30"
+                android:gravity="center"
+                android:layout_marginTop="20dp" />
+            <TextView
+                android:text="You'll need to be outside in order to take the best photos."
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/InstructionStep4"
+                android:textColor="#ff1a1d30"
+                android:gravity="center"
+                android:padding="20dp"
+                android:layout_marginTop="20dp" />
+            <ImageView
+                android:src="@drawable/step4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView4"
+                android:layout_marginTop="20dp" />
+        </LinearLayout>
+    </ViewFlipper>
+    <Button
+        android:text="Okay, I've got it!"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button1"
+        android:layout_margin="35dp"
+        android:background="#ff1a1d30"
+        android:textColor="#ffffffff" />
+</LinearLayout>

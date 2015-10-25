@@ -12,11 +12,12 @@ namespace SunExposureApp
 {
 	[Activity (Label = "SunExposureApp", MainLauncher = true, Icon = "@drawable/icon",
         Theme = "@android:style/Theme.DeviceDefault.Light.NoActionBar")]
-	public class MainActivity : Activity
-	{
+	public class MainActivity : Activity, View.IOnClickListener
+    {
 		private ViewFlipper _viewFlipper;
+	    private Button _button;
 
-		protected override void OnCreate (Bundle bundle)
+	    protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 
@@ -26,6 +27,10 @@ namespace SunExposureApp
 			//var viewGroup = ((ViewGroup)FindViewById<TextView> (Resource.Id.InstructionStep1).Parent);
 			//viewGroup.SetOnTouchListener(new OnSwipeListener(this));
 			_viewFlipper = FindViewById<ViewFlipper>(Resource.Id.ViewFlipper);
+
+            // Button
+			_button = FindViewById<Button>(Resource.Id.button1);
+            _button.SetOnClickListener(this);
 
 			var onSwipeListener = new OnSwipeListener (_viewFlipper, this);
 			FindViewById(Resource.Id.step1View).SetOnTouchListener (onSwipeListener);
@@ -70,7 +75,13 @@ namespace SunExposureApp
 				StartActivity (typeof(ResultsActivity));
 			}
 		}
-	}
+
+	    public void OnClick(View v)
+	    {
+            Intent intent = new Intent(MediaStore.ActionImageCapture);
+            this.StartActivityForResult (intent, 100);
+        }
+    }
 }
 
 public class OnSwipeTouchListener : Java.Lang.Object, Android.Views.View.IOnTouchListener {

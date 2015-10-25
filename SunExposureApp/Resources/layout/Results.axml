@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/linearLayout1"
             android:background="#fffbc02d"
-            android:padding="40dp">
+            android:padding="30dp">
             <TextView
                 android:text="Result"
                 android:textAppearance="?android:attr/textAppearanceLarge"
@@ -36,7 +36,7 @@
                 android:gravity="center"
                 android:textColor="#ff1a1d30"
                 android:layout_marginTop="20dp"
-                android:textSize="50dp"
+                android:textSize="40dp"
                 android:lineSpacingExtra="-10dp"
                 android:fontFamily="sans-serif-thin" />
             <TextView
@@ -48,7 +48,7 @@
                 android:textColor="#ff1a1d30"
                 android:gravity="center"
                 android:layout_marginTop="20dp"
-                android:textSize="25dp"
+                android:textSize="20dp"
                 android:fontFamily="sans-serif-light" />
         </LinearLayout>
         <LinearLayout
@@ -160,21 +160,24 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/linearLayout6"
+            android:padding="35px"
             android:layout_marginTop="30dp">
             <Button
                 android:text="Save Profile"
-                android:layout_width="180dp"
+                android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:id="@+id/saveProfile"
                 android:background="#ff1a1d30"
-                android:textColor="#ffffffff" />
+                android:textColor="#ffffffff"
+                android:layout_marginLeft="10dp" />
             <Button
                 android:text="Set Reminder"
-                android:layout_width="180dp"
+                android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:id="@+id/setReminder"
                 android:textColor="#ffffffff"
-                android:background="#ff1a1d30" />
+                android:background="#ff1a1d30"
+                android:layout_marginLeft="20dp" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
