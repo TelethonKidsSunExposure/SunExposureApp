@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="#fffbc02d"
-    android:padding="40dp">
+    android:padding="40dp"
+    tools:actionBarNavMode="tabs">
     <TextView
         android:text="Step One"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -13,7 +15,8 @@
         android:id="@+id/textView1"
         android:textColor="#ff1a1d30"
         android:gravity="center"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"
+        android:textStyle="bold" />
     <TextView
         android:text="You'll need to be outside in order to take the best photos."
         android:textAppearance="?android:attr/textAppearanceMedium"
