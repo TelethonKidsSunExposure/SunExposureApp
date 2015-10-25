@@ -5,8 +5,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="#fffbc02d"
-    android:padding="40dp"
-    tools:actionBarNavMode="tabs">
+    android:padding="40dp">
     <TextView
         android:text="Step One"
         android:textAppearance="?android:attr/textAppearanceLarge"
